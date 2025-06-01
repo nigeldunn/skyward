@@ -1,0 +1,213 @@
+{
+  "version": "1.0",
+  "starting_techs": ["basic_survival"],
+  "categories": {
+    "survival": {
+      "name": "Survival",
+      "color": "#8B4513",
+      "description": "Basic survival skills and tools"
+    },
+    "crafting": {
+      "name": "Crafting", 
+      "color": "#FF6B35",
+      "description": "Advanced crafting and manufacturing"
+    },
+    "combat": {
+      "name": "Combat",
+      "color": "#DC143C", 
+      "description": "Weapons and defensive technologies"
+    },
+    "magic": {
+      "name": "Magic",
+      "color": "#9932CC",
+      "description": "Mystical arts and enchantments"
+    },
+    "construction": {
+      "name": "Construction",
+      "color": "#2E8B57",
+      "description": "Buildings and infrastructure"
+    }
+  },
+  "technologies": [
+    {
+      "id": "basic_survival",
+      "name": "Basic Survival",
+      "description": "Learn to gather basic materials with your hands",
+      "category": "survival",
+      "tier": 1,
+      "position": {"x": 0, "y": 0},
+      "prerequisites": [],
+      "research_cost": 0,
+      "material_costs": {},
+      "unlocks": {
+        "items": [],
+        "abilities": ["hand_gathering"],
+        "recipes": [],
+        "buildings": [],
+        "research_bonus": 1
+      }
+    },
+    {
+      "id": "tool_making",
+      "name": "Tool Making",
+      "description": "Craft basic tools from wood and stone",
+      "category": "survival", 
+      "tier": 2,
+      "position": {"x": 1, "y": 0},
+      "prerequisites": ["basic_survival"],
+      "research_cost": 10,
+      "material_costs": {"Wood": 5, "Stone": 5},
+      "unlocks": {
+        "items": ["wooden_axe", "stone_pick", "basic_scoop"],
+        "abilities": [],
+        "recipes": ["wooden_axe_recipe", "stone_pick_recipe"],
+        "buildings": [],
+        "research_bonus": null
+      }
+    },
+    {
+      "id": "weapon_crafting",
+      "name": "Weapon Crafting",
+      "description": "Create basic weapons for defense",
+      "category": "combat",
+      "tier": 2, 
+      "position": {"x": 1, "y": -1},
+      "prerequisites": ["basic_survival"],
+      "research_cost": 15,
+      "material_costs": {"Wood": 8, "Stone": 3},
+      "unlocks": {
+        "items": ["wooden_sword", "stone_spear"],
+        "abilities": [],
+        "recipes": ["wooden_sword_recipe", "stone_spear_recipe"],
+        "buildings": [],
+        "research_bonus": null
+      }
+    },
+    {
+      "id": "metalworking",
+      "name": "Metalworking",
+      "description": "Smelt and work with metal materials", 
+      "category": "crafting",
+      "tier": 2,
+      "position": {"x": 1, "y": 1},
+      "prerequisites": ["basic_survival"],
+      "research_cost": 20,
+      "material_costs": {"Stone": 10, "Flux": 5},
+      "unlocks": {
+        "items": ["furnace"],
+        "abilities": [],
+        "recipes": ["metal_smelting"],
+        "buildings": ["smelter"],
+        "research_bonus": null
+      }
+    },
+    {
+      "id": "advanced_tools",
+      "name": "Advanced Tools", 
+      "description": "Metal tools with improved efficiency",
+      "category": "crafting",
+      "tier": 3,
+      "position": {"x": 2, "y": 0},
+      "prerequisites": ["tool_making", "metalworking"],
+      "research_cost": 25,
+      "material_costs": {"Metal": 10, "Wood": 5},
+      "unlocks": {
+        "items": ["iron_axe", "iron_pick"],
+        "abilities": ["efficient_harvesting"],
+        "recipes": ["iron_tool_recipes"],
+        "buildings": [],
+        "research_bonus": null
+      }
+    },
+    {
+      "id": "advanced_weapons",
+      "name": "Advanced Weapons",
+      "description": "Forged metal weapons with superior damage",
+      "category": "combat",
+      "tier": 3,
+      "position": {"x": 2, "y": -1},
+      "prerequisites": ["weapon_crafting", "metalworking"],
+      "research_cost": 30,
+      "material_costs": {"Metal": 15, "Wood": 3},
+      "unlocks": {
+        "items": ["iron_sword", "iron_spear", "crossbow"],
+        "abilities": ["weapon_mastery"],
+        "recipes": ["iron_weapon_recipes"],
+        "buildings": [],
+        "research_bonus": null
+      }
+    },
+    {
+      "id": "mysticism",
+      "name": "Mysticism",
+      "description": "Unlock the basics of magical understanding",
+      "category": "magic",
+      "tier": 2,
+      "position": {"x": 0, "y": -2},
+      "prerequisites": ["basic_survival"],
+      "research_cost": 25,
+      "material_costs": {"Flux": 10},
+      "unlocks": {
+        "items": ["crystal_focus"],
+        "abilities": ["mana_sense"],
+        "recipes": ["basic_enchanting"],
+        "buildings": [],
+        "research_bonus": null
+      }
+    },
+    {
+      "id": "enchanting",
+      "name": "Enchanting",
+      "description": "Imbue items with magical properties",
+      "category": "magic",
+      "tier": 4,
+      "position": {"x": 3, "y": -1},
+      "prerequisites": ["advanced_tools", "mysticism"],
+      "research_cost": 50,
+      "material_costs": {"Metal": 15, "Flux": 20},
+      "unlocks": {
+        "items": ["enchanting_crystal"],
+        "abilities": ["enchant_weapon", "enchant_tool"],
+        "recipes": ["enchanted_equipment"],
+        "buildings": ["enchanting_table"],
+        "research_bonus": null
+      }
+    },
+    {
+      "id": "construction",
+      "name": "Construction",
+      "description": "Build permanent structures and shelters",
+      "category": "construction",
+      "tier": 2,
+      "position": {"x": 1, "y": 2},
+      "prerequisites": ["basic_survival"],
+      "research_cost": 12,
+      "material_costs": {"Wood": 10, "Stone": 10},
+      "unlocks": {
+        "items": ["building_hammer"],
+        "abilities": [],
+        "recipes": ["basic_building_recipes"],
+        "buildings": ["wooden_shelter", "stone_foundation"],
+        "research_bonus": null
+      }
+    },
+    {
+      "id": "advanced_construction",
+      "name": "Advanced Construction",
+      "description": "Create complex buildings and defensive structures",
+      "category": "construction",
+      "tier": 3,
+      "position": {"x": 2, "y": 2},
+      "prerequisites": ["construction", "metalworking"],
+      "research_cost": 35,
+      "material_costs": {"Wood": 15, "Stone": 15, "Metal": 10},
+      "unlocks": {
+        "items": ["advanced_building_tools"],
+        "abilities": ["master_builder"],
+        "recipes": ["advanced_building_recipes"],
+        "buildings": ["fortified_walls", "watchtower", "workshop"],
+        "research_bonus": null
+      }
+    }
+  ]
+}
